@@ -1,0 +1,24 @@
+y
+help allocate
+help t5e
+allocate 5
+write 0 ffffaaaa
+display 0 5
+p_write 0 5
+p_verify 0 5
+p_verify 1 5
+y
+free
+allocate 3
+write 0 ffff0000
+write 1 0000ffff
+write 2 ffff0000
+display 0 3
+invert 0 3
+display 0 3
+free
+allocate 100000
+p_write 0 100000
+invert 0 100000
+free
+exit
